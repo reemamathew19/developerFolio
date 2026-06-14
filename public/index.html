@@ -1,83 +1,236 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+   /* Change this file to get your personal Portfolio */
 
-    <!-- Edit meta tags for SEO -->
-    <title>DeveloperFolio | Developer Portfolio Template</title>
-    <meta name="title" content="DeveloperFolio | Developer Portfolio Template">
-    <meta name="description" content="Software Developer Portfolio Template that helps you showcase your work and skills as a software developer">
+// To change portfolio colors globally go to the  _globalColor.scss file
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://developerfolio.js.org/">
-    <meta property="og:title" content="DeveloperFolio | Developer Portfolio Template">
-    <meta property="og:description" content="Software Developer Portfolio Template that helps you showcase your work and skills as a software developer">
-    <!-- Link to a hosted image -->
-    <!-- <meta property="og:image" content=""> -->
-    
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://developerfolio.js.org/">
-    <meta property="twitter:title" content="DeveloperFolio | Developer Portfolio Template">
-    <meta property="twitter:description" content="Software Developer Portfolio Template that helps you showcase your work and skills as a software developer">
-    <!-- Link to a hosted image -->
-    <!-- <meta property="twitter:image" content=""> -->
+import emoji from "react-easy-emoji";
+import splashAnimation from "./assets/lottie/splashAnimation"; // Rename to your file name for custom animation
 
-    <meta name="msapplication-TileColor" content="#603cba">
-    <meta name="theme-color" content="#6c63ff" />
+// Splash Screen
 
-    <!-- Customize icons -->
-    <link rel="icon" type="image/png" sizes="32x32" href="%PUBLIC_URL%/favicon-32x32.png?v8=qAJ44G5Bm7">
-    <link rel="icon" type="image/png" sizes="16x16" href="%PUBLIC_URL%/favicon-16x16.png?v8=qAJ44G5Bm7">
-    <link rel="mask-icon" href="%PUBLIC_URL%/safari-pinned-tab.svg?v8=qAJ44G5Bm7" color="#885bd5">
-    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico?v8=qAJ44G5Bm7">
-    <link rel="apple-touch-icon" sizes="180x180" href="%PUBLIC_URL%/apple-touch-icon.png?v8=qAJ44G5Bm7">
-	  <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    
-    <link rel=preload href="/static/media/Montserrat-Regular.ee653992.ttf" as="font" type="font/woff" crossorigin>
-    <link rel=preload href="/static/media/Agustina.21f233e1.woff" as="font" type="font/woff" crossorigin>
-    
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-135618960-2"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+const splashScreen = {
+  enabled: true, // set false to disable splash screen
+  animation: splashAnimation,
+  duration: 2000 // Set animation duration as per your animation
+};
 
-      gtag('config', 'UA-135618960-2');
-    </script>
+// Summary And Greeting Section
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/FortAwesome/Font-Awesome@5.15.4/css/all.min.css">
+const illustration = {
+  animated: true // Set to false to use static SVG
+};
+
+const greeting = {
+  username: "Reema Mathew",
+  title: "Hi, I'm Reema Mathew",
+  subTitle:
+    "B.Tech Artificial Intelligence and Data Science student passionate about Web Development, Data Analytics, and Software Development."
+};
 
 
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+<body>
+const socialMediaLinks = {
+ github: "https://github.com/reemamathew19",
+linkedin: "https://www.linkedin.com/in/reema-mathew-b64588305",}
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+const skillsSection = {
+const skillsSection = {
+  title: "Technical Skills",
+  subTitle: "AI & Data Science Student",
+  skills: [
+    "⚡ Python, C, C++, SQL, JavaScript",
+    "⚡ HTML, CSS, JavaScript",
+    "⚡ IBM Cognos Analytics",
+    "⚡ Data Visualization and Dashboard Development",
+    "⚡ Artificial Intelligence and Machine Learning",
+    "⚡ Software Development, Testing and Debugging"
+  ]
+};
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+// Education Section
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+const educationInfo = {
+const educationInfo = [
+  {
+    schoolName: "Anna University",
+    degree: "Bachelor of Technology (B.Tech) - Artificial Intelligence and Data Science",
+    duration: "2024 - 2028"
+  },
+  {
+    schoolName: "Sri Vijay Vidyalaya Matric Higher Secondary School",
+    degree: "Higher Secondary Education"
+  }
+];
+};
+
+// Your top 3 proficient stacks/tech experience
+
+const techStack = {
+ };
+
+// Work experience section
+const techStack = {
+  viewSkillBars: true,
+  experience: [
+    {
+      Stack: "Python",
+      progressPercentage: "85%"
+    },
+    {
+      Stack: "C & C++",
+      progressPercentage: "80%"
+    },
+    {
+      Stack: "SQL",
+      progressPercentage: "75%"
+    },
+    {
+      Stack: "HTML/CSS/JavaScript",
+      progressPercentage: "80%"
+    },
+    {
+      Stack: "IBM Cognos Analytics",
+      progressPercentage: "75%"
+    },
+    {
+      Stack: "Artificial Intelligence & Machine Learning",
+      progressPercentage: "70%"
+    }
+  ]
+};
+const workExperiences = [
+  {
+    role: "IBM Cognos Analytics Intern",
+    company: "Adroit Technologies Innovative Solutions Pvt. Ltd.",
+    date: "March 2026 - April 2026",
+    desc: "Worked on Business Intelligence, Dashboard Development, Reporting and Data Analytics."
+  },
+  {
+    role: "Software Development Intern",
+    company: "INSTA3D Technologies",
+    date: "July 2025 - August 2025",
+    desc: "Participated in software development, debugging, testing and application improvement."
+  }
+];
+
+/* Your Open Source Section to View Your Github Pinned Projects
+To know how to get github key look at readme.md */
+
+const openSource = {
+  showGithubProfile: "true", // Set true or false to show Contact profile using Github, defaults to true
+  display: true // Set false to hide this section, defaults to true
+};
+
+// Some big projects you have worked on
+
+const bigProjects const projects = {
+  data: [
+    {
+      name: "Personal Portfolio Website",
+      description:
+        "Developed a responsive portfolio website to showcase skills, internships, certifications, and projects.",
+      githubLink: "https://github.com/reemamathew19"
+    },
+    {
+      name: "IBM Cognos Analytics Dashboard",
+      description:
+        "Created dashboards and reports using IBM Cognos Analytics to visualize business data and generate insights.",
+      githubLink: ""
+    },
+    {
+      name: "Student Management System",
+      description:
+        "Developed a basic student management application using Python and SQL for managing student records.",
+      githubLink: ""
+    }
+  ]
+};
+// Achievement Section
+// Include certificates, talks etc
+
+const achievementSection = {
+  const achievementSection = {
+  title: "Achievements & Certifications",
+  achievementsCards: [
+    {
+      title: "Introduction to IBM Cognos Analytics Certification",
+      subtitle: "IBM - March 2026"
+    },
+    {
+      title: "Software Development Internship",
+      subtitle: "INSTA3D Technologies"
+    },
+    {
+      title: "Business Intelligence Internship",
+      subtitle: "Adroit Technologies Innovative Solutions Pvt. Ltd."
+    }
+  ]const blogSection = {
+  display: false
+};
+};
+// Blogs Section
+
+
+const talkSection = {
+  display: false,
+  title: "Talks & Events",
+  talks: [
+    "Served as MC for multiple college events",
+    "Organized and conducted various academic and cultural programs"
+  ]
+};
+// Podcast Section
+
+const podcastSection = {
+  display: false,
+  title: "Podcasts",
+  podcasts: []
+};
+
+// Resume Section
+const resumeSection = {
+  display: true,
+  download: true,
+  fileName:resume: "/assets/Reema_KM_ATS_Resume.pdf"
+
+const contactInfo = {
+  title: emoji("Contact Me ☎️ 9944286392"),
+  
+   
+  email_address: "reemamathew19@gmail.com"
+};
+
+// Twitter Section
+
+const twitterDetails = {
+  userName: "twitter", //Replace "twitter" with your twitter username without @
+  display: false // Set true to display this section, defaults to false
+};
+
+const isHireable = false; // Set false if you are not looking for a job. Also isHireable will be display as Open for opportunities: Yes/No in the GitHub footer
+
+export {
+  illustration,
+  greeting,
+  socialMediaLinks,
+  splashScreen,
+  skillsSection,
+  educationInfo,
+  techStack,
+  workExperiences,
+  openSource,
+  bigProjects,
+  achievementSection,
+  blogSection,
+  talkSection,
+  podcastSection,
+  contactInfo,
+  twitterDetails,
+  isHireable,
+  resumeSection
+};
+  
   </body>
 </html>
